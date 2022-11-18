@@ -13,6 +13,7 @@
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="MySql.Data.EntityFrameworkCore" />
     <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="Views\Command\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
@@ -39,5 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
+    <Folder Include="Views\Command\" />
   </ItemGroup>
 </Project>

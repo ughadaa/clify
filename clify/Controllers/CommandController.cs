@@ -53,15 +53,28 @@ namespace clify.Controllers
 
         // POST: /command/Edit/id
         [HttpPost]
-        public IActionResult Edit(int Id, [Bind("name", "des")] CommandModel command)
+        public IActionResult Edit([Bind("id", "name", "des")] CommandModel command)
         {
-            var Command = _db.Commands.ToList().Find(c => c.id == Id);
+            //var Command = _db.Commands.ToList().Find(c => c.id == Id);
             _db.Commands.Update(command);
             _db.SaveChanges();
-            ViewData["Command"] = Command;
+            ViewData["Command"] = command;
             return RedirectToAction("Index");
         }
 
+        //POST: /command/delete/id
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            var Command = _db.Commands.ToList().FirstOrDefault(c => c.id == id);
+            _db.Commands.Remove(Command);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+
         }
+
+    }
+
+
 
     }

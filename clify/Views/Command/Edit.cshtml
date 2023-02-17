@@ -1,27 +1,35 @@
 ﻿@model CommandModel
 @{
-    var Commands = (CommandModel)ViewData["Commands"];
+    var Command = (CommandModel)ViewData["Command"];
 }
 
 <form asp-action="Edit" method="post" class="needs-validation" novalidate>
+
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <input asp-for="id" type="hidden" value=@Command.id>
+        </div>
+
+    </div>
+
     <div class="form-row">
         <div class="col-md-4 mb-3">
             <label asp-for="name" for="validationCustom01">Command</label>
-            <input asp-for="name" type="text" class="form-control" id="validationCustom01" placeholder=@Commands.name required>
+            <input asp-for="name" class="form-control" id="validationCustom01" placeholder=@Command.name required value="@Command.name">
         </div>
 
     </div>
     <div class="form-row">
         <div class="col-md-6 mb-3">
             <label asp-for="des" for="validationCustom03">Description</label>
-            <input asp-for="des" type="text" class="form-control" id="validationCustom03" placeholder=@Commands.des required>
+            <input asp-for="des" class="form-control" id="validationCustom03" placeholder=@Command.des required value="@Command.des">
             <div class="invalid-feedback">
                 Please provide a valid description.
             </div>
         </div>
     </div>
 
-    <button class="btn btn-primary" type="submit">Submit</button>
+    <button class="btn btn-primary" type="submit">Update</button>
 </form>
 
 <script>// Example starter JavaScript for disabling form submissions if there are invalid fields

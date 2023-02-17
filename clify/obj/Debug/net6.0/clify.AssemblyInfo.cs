@@ -10,7 +10,7 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
+//[assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-clify-C3B20963-8B24-497C-AF41-4B8015F7AF79")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("clify")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]

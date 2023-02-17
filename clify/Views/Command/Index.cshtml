@@ -10,8 +10,11 @@
             <h5 class="card-title">@Command.name</h5>
             <p class="card-text">@Command.des</p>
 
-            <button asp-action="Edit" type="button" class="btn btn-outline-light">Edit</button>
+            <button asp-controller="Command" asp-action="Edit" type="button" class="btn btn-outline-light"><a style="color:white" href="/Command/Edit/@Command.id">Edit</a></button>
 
+            <form method="post" asp-action="Delete" asp-controller="Command" asp-route-id="@Command.id">
+                <input type="submit" class="btn btn-outline-light" value="Delete" />
+            </form>
 
         </div>
     </div>

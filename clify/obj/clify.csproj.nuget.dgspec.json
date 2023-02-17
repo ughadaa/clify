@@ -1,30 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ratina/Projects/clify/clify/clify.csproj": {}
+    "/Users/ghada/Documents/clify/clify/clify.csproj": {}
   },
   "projects": {
-    "/Users/ratina/Projects/clify/clify/clify.csproj": {
+    "/Users/ghada/Documents/clify/clify/clify.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ratina/Projects/clify/clify/clify.csproj",
+        "projectUniqueName": "/Users/ghada/Documents/clify/clify/clify.csproj",
         "projectName": "clify",
-        "projectPath": "/Users/ratina/Projects/clify/clify/clify.csproj",
-        "packagesPath": "/Users/ratina/.nuget/packages/",
-        "outputPath": "/Users/ratina/Projects/clify/clify/obj/",
+        "projectPath": "/Users/ghada/Documents/clify/clify/clify.csproj",
+        "packagesPath": "/Users/ghada/.nuget/packages/",
+        "outputPath": "/Users/ghada/Documents/clify/clify/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/ratina/.nuget/NuGet/NuGet.Config"
+          "/Users/ghada/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -35,40 +35,40 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.8, )"
+              "version": "[7.0.3, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.8, )"
+              "version": "[7.0.3, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[6.0.8, )"
+              "version": "[7.0.3, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[7.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[7.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[6.0.8, )"
+              "version": "[7.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.9, )"
+              "version": "[7.0.3, )"
             },
             "MySql.Data.EntityFrameworkCore": {
               "target": "Package",
@@ -94,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
         }
       }
     }

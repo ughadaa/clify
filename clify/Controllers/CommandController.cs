@@ -38,5 +38,30 @@ namespace clify.Controllers
             _db.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        // GET: /command/Edit
+        public IActionResult Edit(int? Id)
+        {
+            var Command = _db.Commands.ToList().Find(c => c.id == Id);
+            if(Id == null || Command == null)
+            {
+                return View("_NotFound");
+            }
+            ViewData["Command"] = Command;
+            return View();
+        }
+
+        // POST: /command/Edit/id
+        [HttpPost]
+        public IActionResult Edit(int Id, [Bind("name", "des")] CommandModel command)
+        {
+            var Command = _db.Commands.ToList().Find(c => c.id == Id);
+            _db.Commands.Update(command);
+            _db.SaveChanges();
+            ViewData["Command"] = Command;
+            return RedirectToAction("Index");
+        }
+
+        }
+
     }
-}

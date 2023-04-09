@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/Users/ghada/Documents/clify/clify/wwwroot/images/border_color_24px.png",
+      "PackagePath": "staticwebassets/images/border_color_24px.png"
+    },
+    {
       "Id": "/Users/ghada/Documents/clify/clify/wwwroot/images/clify.png",
       "PackagePath": "staticwebassets/images/clify.png"
     },

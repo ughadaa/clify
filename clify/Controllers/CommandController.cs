@@ -32,7 +32,7 @@ namespace clify.Controllers
         }
         // POST: /command/create
         [HttpPost]
-        public IActionResult Create([Bind("name","des")]CommandModel command)
+        public IActionResult Create([Bind("name","des", "category", "sub")]CommandModel command)
         {
             _db.Commands.Add(command);
             _db.SaveChanges();
@@ -53,7 +53,7 @@ namespace clify.Controllers
 
         // POST: /command/Edit/id
         [HttpPost]
-        public IActionResult Edit([Bind("id", "name", "des")] CommandModel command)
+        public IActionResult Edit([Bind("id", "name", "des", "category", "sub")] CommandModel command)
         {
             //var Command = _db.Commands.ToList().Find(c => c.id == Id);
             _db.Commands.Update(command);

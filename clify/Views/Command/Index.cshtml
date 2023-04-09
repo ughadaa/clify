@@ -2,20 +2,44 @@
     var Commands = (List<CommandModel>)ViewData["Commands"];
 }
 
+<main class="mainnn">
+    <input type="Submit" onclick="location.href='@Url.Action("Create","Command")'" value="Add" class="addbtn" />
 
-@foreach (var Command in Commands)
-{
-    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">@Command.name</h5>
-            <p class="card-text">@Command.des</p>
+    <section class="cards">
 
-            <button asp-controller="Command" asp-action="Edit" type="button" class="btn btn-outline-light"><a style="color:white" href="/Command/Edit/@Command.id">Edit</a></button>
+        @foreach (var Command in Commands)
+        {
+            <!--<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">-->
+            <div class="card">
+                <div class="card__content">
 
-            <form method="post" asp-action="Delete" asp-controller="Command" asp-route-id="@Command.id">
-                <input type="submit" class="btn btn-outline-light" value="Delete" />
-            </form>
 
-        </div>
-    </div>
-}
+                    <div class="card-body">
+                        @if (Command.category == "System")
+                        {
+                                <h5 class="card__title text--medium" style="color:violet">@Command.name</h5>
+                    }
+                    else
+                    {
+                        <h5 class="card__title text--medium">@Command.name</h5>}
+                        <div "card__info">
+
+                            <p class="card-text">@Command.des</p>
+
+                            <a style="color:white" href="/Command/Edit/@Command.id"><img src="images/border_color_24px.png" style="height: 30px; width:30px; padding:15px;" /></a>
+
+                            <form method="post" asp-action="Delete" asp-controller="Command" asp-route-id="@Command.id">
+                                <input type="submit" class="card__btn text--medium-startbtn" value="Delete" />
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--</div>-->
+        }
+
+
+    </section>
+</main>

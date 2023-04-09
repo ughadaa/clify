@@ -1,6 +1,7 @@
 ﻿@model CommandModel
 
 
+
 <form asp-action="Create" method="post" class="needs-validation" novalidate>
     <div class="form-row">
         <div class="col-md-4 mb-3">
@@ -18,9 +19,26 @@
             </div>
         </div>
     </div>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label asp-for="category" for="validationCustom03">Category</label>
+            <input asp-for="category" type="text" class="form-control" id="validationCustom03" placeholder="Category" required>
+            <div class="invalid-feedback">
+                Please provide a valid description.
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label asp-for="sub" for="validationCustom03">Sub-Category</label>
+            <input asp-for="sub" type="text" class="form-control" id="validationCustom03" placeholder="Sub-Category">
+   
+        </div>
+    </div>
 
     <button class="btn btn-primary" type="submit">Submit</button>
 </form>
+
 
 <script>// Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {

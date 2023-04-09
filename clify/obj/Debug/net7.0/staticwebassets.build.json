@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "BW1BC9nuVhBV8ujwvnCFHABBu8UmEkBUMElBFohiAu8=",
+  "Hash": "NQw9b11rIV4qhnQA4ZdkwBp4R9qjgGcyNRem6ViGEFE=",
   "Source": "clify",
   "BasePath": "_content/clify",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/ghada/Documents/clify/clify/wwwroot/images/border_color_24px.png",
+      "SourceId": "clify",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/ghada/Documents/clify/clify/wwwroot/",
+      "BasePath": "_content/clify",
+      "RelativePath": "images/border_color_24px.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/border_color_24px.png"
     },
     {
       "Identity": "/Users/ghada/Documents/clify/clify/wwwroot/images/clify.png",

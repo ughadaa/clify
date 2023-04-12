@@ -46,6 +46,14 @@ namespace clify.Controllers
             return View();
         }
 
+        // GET: command/docker
+        public IActionResult Git()
+        {
+            var Commands = _db.Commands.ToList();
+            ViewData["Commands"] = Commands;
+            return View();
+        }
+
         // GET: command/storage
         public IActionResult Storage()
         {

@@ -1,0 +1,66 @@
+﻿@{
+    var Commands = (List<CommandModel>)ViewData["Commands"];
+}
+
+<main class="mainnn">
+    <input type="Submit" onclick="location.href='@Url.Action("Create","Command")'" value="+" class="addbtn" />
+
+
+    <p class="side-bar-tl">Commands</p>
+    <div class="side-bar">
+        <a href="/Command">System</a>
+        <a href="/Command/Docker">Docker</a>
+        <a>Git</a>
+
+    </div>
+
+    <section class="cards">
+        
+        @foreach (var Command in Commands)
+        {
+                if(Command.category == "Docker") { 
+            <!--<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">-->
+
+            <div class="card">
+                <div class="card__content">
+
+
+                    <div class="card-body">
+                        <div class="card__image-container">
+                            <div></div>
+                        </div>
+                        @if (Command.category == "System")
+                        {
+                            <h5 class="card__title text--medium" style="color:violet">@Command.name</h5>
+                        }
+                        else
+                        {
+                            <h5 class="card__title text--medium">@Command.name</h5>}
+
+
+                        <p class="card__title">@Command.des</p>
+
+                        <div class="card__info">
+
+
+                            <a style="color:white" href="/Command/Edit/@Command.id"><img class="btnimage" src="~/images/border_color_24px.svg" /></a>
+
+                            <form method="post" asp-action="Delete" asp-controller="Command" asp-route-id="@Command.id">
+                                <input class="btnimage" type="image" src="~/images/delete_24px.svg" style="height:20px; width:20px " />
+
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--                                <input type="submit" class="card__btn text--medium-startbtn" value="Delete" />
+                -->
+                }
+            }
+
+
+    </section>
+</main>

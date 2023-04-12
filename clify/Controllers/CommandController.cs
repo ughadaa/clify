@@ -22,8 +22,50 @@ namespace clify.Controllers
         {
             var Commands = _db.Commands.ToList();
             ViewData["Commands"] = Commands;
+
+  /*          foreach(var cmd in Commands)
+            {
+                if(cmd.sub == "Storage")
+                {
+                    List<CommandModel> storageCmds = new List<CommandModel>();
+
+                    storageCmds.Add(cmd);
+                    ViewData["storageCmds"] = storageCmds;
+                    return View("Storage");
+                }
+            }*/
+
             return View();
         }
+
+        // GET: command/docker
+        public IActionResult Docker()
+        {
+            var Commands = _db.Commands.ToList();
+            ViewData["Commands"] = Commands;
+            return View();
+        }
+
+        // GET: command/storage
+        public IActionResult Storage()
+        {
+            var Commands = _db.Commands.ToList();
+            ViewData["Commands"] = Commands;
+            return View();
+        }
+        public IActionResult Files()
+        {
+            var Commands = _db.Commands.ToList();
+            ViewData["Commands"] = Commands;
+            return View();
+        }
+        public IActionResult Localization()
+        {
+            var Commands = _db.Commands.ToList();
+            ViewData["Commands"] = Commands;
+            return View();
+        }
+
 
         // GET: /command/create
         public IActionResult Create()

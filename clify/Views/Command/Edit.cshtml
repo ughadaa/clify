@@ -29,6 +29,14 @@
         </div>
     </div>
 
+    <div class="col-md-4 mb-3">
+        <input asp-for="category" type="hidden" value=@Command.category>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <input asp-for="sub" type="hidden" value=@Command.sub>
+    </div>
+
     <button class="btn btn-primary" type="submit">Update</button>
 </form>
 

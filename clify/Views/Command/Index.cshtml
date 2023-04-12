@@ -2,34 +2,133 @@
     var Commands = (List<CommandModel>)ViewData["Commands"];
 }
 
-<main class="mainnn">
-    <input type="Submit" onclick="location.href='@Url.Action("Create","Command")'" value="Add" class="addbtn" />
+<main id="page" class="mainnn">
+    <input type="Submit" onclick="location.href='@Url.Action("Create","Command")'" value="+" class="addbtn" />
+
+    <p class="side-bar-tl">Commands</p>
+    <div class="side-bar">
+        <a href="/Command">System</a>
+        <a href="/Command/Docker">Docker</a>
+        <a>Git</a>
+
+    </div>
+
+
 
     <section class="cards">
+
+
+        <div class="topcard">
+            <div class="topcard__content">
+
+
+                <div class="topcard-body">
+                    <div class="topcard__image-container">
+                        <img style=" width: 65px; " src="images/unarchive_24px_rounded.svg" />
+                    </div>
+
+                    <a class="topcard__title text--medium toplinks" href="Command/Storage">Storage and Device</a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="topcard1">
+            <div class="topcard__content">
+
+
+                <div class="topcard-body">
+                    <div class="topcard__image-container">
+                        <img src="images/file_copy_24px_rounded.svg" />
+                    </div>
+
+                    <a class="topcard__title text--medium toplinks" href="Command/Files">Files and Directories</a>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="topcard2">
+            <div class="topcard__content">
+
+
+                <div class="topcard-body">
+                    <div class="topcard__image-container">
+                        <img src="images/format_color_text_24px_rounded.svg" />
+                    </div>
+
+                    <a class="topcard__title text--medium toplinks" href="Command/Localization">Localization</a>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+    <!--h------------------------------------>
+    <section id="all-cards" class="cards">
 
         @foreach (var Command in Commands)
         {
             <!--<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">-->
+
             <div class="card">
                 <div class="card__content">
 
 
                     <div class="card-body">
-                        @if (Command.category == "System")
+
+                        @if (Command.sub == "Storage") //change card color
                         {
-                                <h5 class="card__title text--medium" style="color:violet">@Command.name</h5>
-                    }
-                    else
-                    {
-                        <h5 class="card__title text--medium">@Command.name</h5>}
-                        <div "card__info">
+                            <div class="card__image-container-storage">
+                                <div></div>
+                            </div>
+                        }
 
-                            <p class="card-text">@Command.des</p>
+                        else if (Command.sub == "File")
+                        {
+                            <div class="card__image-container-file">
+                                <div></div>
+                            </div>
+                        }
 
-                            <a style="color:white" href="/Command/Edit/@Command.id"><img src="images/border_color_24px.png" style="height: 30px; width:30px; padding:15px;" /></a>
+                        else if (Command.sub == "Localization")
+                        {
+                            <div class="card__image-container-locale">
+                                <div></div>
+                            </div>
+                        }
+
+
+                        else
+                        {
+                            <div class="card__image-container">
+                                <div></div>
+                            </div>
+                        }
+
+                        <h5 class="card__title text--medium">@Command.name</h5>
+
+
+                        <p class="card__title">@Command.des</p>
+
+                        <div class="card__info">
+
+
+                            <a style="color:white" href="/Command/Edit/@Command.id"><img class="btnimage" src="images/border_color_24px.svg" /></a>
 
                             <form method="post" asp-action="Delete" asp-controller="Command" asp-route-id="@Command.id">
-                                <input type="submit" class="card__btn text--medium-startbtn" value="Delete" />
+                                <input class="btnimage" type="image" src="images/delete_24px.svg" style="height:20px; width:20px " />
+
+
                             </form>
 
                         </div>
@@ -37,9 +136,124 @@
 
                 </div>
             </div>
-            <!--</div>-->
+            <!--                                <input type="submit" class="card__btn text--medium-startbtn" value="Delete" />
+                -->
         }
 
 
     </section>
 </main>
+
+<!--change page when clicked-------------->
+<div id="st" hidden>
+    <section id="s-cards" class="cards">
+
+        @foreach (var Command in Commands)
+            {
+            @if (Command.sub == "Storage") //change card color
+                {
+                <div class="card">
+                    <div class="card__content">
+
+
+                        <div class="card-body">
+
+
+                            <div class="card__image-container-storage">
+                                <div></div>
+                            </div>
+
+
+                            <h5 class="card__title text--medium">@Command.name</h5>
+
+
+                            <p class="card__title">@Command.des</p>
+
+                            <div class="card__info">
+
+
+                                <a style="color:white" href="/Command/Edit/@Command.id"><img class="btnimage" src="images/border_color_24px.svg" /></a>
+
+                                <form method="post" asp-action="Delete" asp-controller="Command" asp-route-id="@Command.id">
+                                    <input class="btnimage" type="image" src="images/delete_24px.svg" style="height:20px; width:20px " />
+
+
+                                </form>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                    }
+                }
+
+
+        </section>
+</div>
+
+<!--change page when clicked-------------->
+
+
+
+
+<script>
+
+    var content = "<section id='s-cards' class='cards'> @foreach (var Command in Commands) { <div class='card'><div class='card__content'><div class='card-body'><div class='card__image-container-storage'><div></div></div><h5 class='card__title text--medium'>@Command.name</h5><p class='card__title'>@Command.des</p><div class='card__info'><a style='color:white' href='/Command/Edit/@Command.id'><img class='btnimage' src='images/border_color_24px.svg' /></a><form method='post' asp-action='Delete' asp-controller='Command' asp-route-id='@Command.id'><input class='btnimage" type="image' src='images/delete_24px.svg' style='height:20px; width:20px' /></form></div></div></div></div>}</section>";
+
+        document.getElementById("storage-btn").onclick = function () {
+
+
+           document.getElementById("page").innerHTML = '<section id="s-cards" class="cards">
+
+        @foreach (var Command in Commands)
+            {
+            @if (Command.sub == "Storage") //change card color
+                {
+                <div class="card">
+                    <div class="card__content">
+
+
+                        <div class="card-body">
+
+
+                            <div class="card__image-container-storage">
+                                <div></div>
+                            </div>
+
+
+                            <h5 class="card__title text--medium">@Command.name</h5>
+
+
+                            <p class="card__title">@Command.des</p>
+
+                            <div class="card__info">
+
+
+                                <a style="color:white" href="/Command/Edit/@Command.id"><img class="btnimage" src="images/border_color_24px.svg" /></a>
+
+                                <form method="post" asp-action="Delete" asp-controller="Command" asp-route-id="@Command.id">
+                                    <input class="btnimage" type="image" src="images/delete_24px.svg" style="height:20px; width:20px " />
+
+
+                                </form>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                    }
+                }
+
+
+        </section>';
+
+
+        }</script>
+
+
+
+

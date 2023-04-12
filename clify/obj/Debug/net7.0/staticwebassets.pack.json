@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/clify.bundle.scp.css"
     },
     {
+      "Id": "/Users/ghada/Documents/clify/clify/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
       "Id": "/Users/ghada/Documents/clify/clify/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
@@ -13,12 +17,36 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/Users/ghada/Documents/clify/clify/wwwroot/images/add-btn.png",
+      "PackagePath": "staticwebassets/images/add-btn.png"
+    },
+    {
       "Id": "/Users/ghada/Documents/clify/clify/wwwroot/images/border_color_24px.png",
       "PackagePath": "staticwebassets/images/border_color_24px.png"
     },
     {
+      "Id": "/Users/ghada/Documents/clify/clify/wwwroot/images/border_color_24px.svg",
+      "PackagePath": "staticwebassets/images/border_color_24px.svg"
+    },
+    {
+      "Id": "/Users/ghada/Documents/clify/clify/wwwroot/images/border_color_24px_rounded.svg",
+      "PackagePath": "staticwebassets/images/border_color_24px_rounded.svg"
+    },
+    {
       "Id": "/Users/ghada/Documents/clify/clify/wwwroot/images/clify.png",
       "PackagePath": "staticwebassets/images/clify.png"
+    },
+    {
+      "Id": "/Users/ghada/Documents/clify/clify/wwwroot/images/delete_24px.svg",
+      "PackagePath": "staticwebassets/images/delete_24px.svg"
+    },
+    {
+      "Id": "/Users/ghada/Documents/clify/clify/wwwroot/images/file_copy_24px_rounded.svg",
+      "PackagePath": "staticwebassets/images/file_copy_24px_rounded.svg"
+    },
+    {
+      "Id": "/Users/ghada/Documents/clify/clify/wwwroot/images/format_color_text_24px_rounded.svg",
+      "PackagePath": "staticwebassets/images/format_color_text_24px_rounded.svg"
     },
     {
       "Id": "/Users/ghada/Documents/clify/clify/wwwroot/images/index.png",
@@ -27,6 +55,22 @@
     {
       "Id": "/Users/ghada/Documents/clify/clify/wwwroot/images/landing.png",
       "PackagePath": "staticwebassets/images/landing.png"
+    },
+    {
+      "Id": "/Users/ghada/Documents/clify/clify/wwwroot/images/logoc.svg",
+      "PackagePath": "staticwebassets/images/logoc.svg"
+    },
+    {
+      "Id": "/Users/ghada/Documents/clify/clify/wwwroot/images/term.gif",
+      "PackagePath": "staticwebassets/images/term.gif"
+    },
+    {
+      "Id": "/Users/ghada/Documents/clify/clify/wwwroot/images/toppic.svg",
+      "PackagePath": "staticwebassets/images/toppic.svg"
+    },
+    {
+      "Id": "/Users/ghada/Documents/clify/clify/wwwroot/images/unarchive_24px_rounded.svg",
+      "PackagePath": "staticwebassets/images/unarchive_24px_rounded.svg"
     },
     {
       "Id": "/Users/ghada/Documents/clify/clify/wwwroot/js/site.js",

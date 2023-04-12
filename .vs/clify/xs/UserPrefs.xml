@@ -1,12 +1,19 @@
 ﻿<Properties StartupConfiguration="{9041AA6D-9B2D-4B90-AD04-F959062749E3}|Default">
-  <MonoDevelop.Ide.ItemProperties.clify PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="clify/Data/ApplicationDbContext.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="clify/appsettings.json">
     <Files>
-      <File FileName="clify/Program.cs" Line="13" Column="33" />
       <File FileName="clify/Controllers/HomeController.cs" Line="34" Column="29" />
-      <File FileName="clify/wwwroot/css/site.css" Line="41" Column="1" />
-      <File FileName="clify/Models/CommandModel.cs" Line="10" Column="16" />
       <File FileName="clify/Data/ApplicationDbContext.cs" Line="10" Column="1" />
+      <File FileName="clify/Controllers/CommandController.cs" Line="60" Column="1" />
+      <File FileName="clify/Views/Command/Edit.cshtml" Line="10" Column="46" />
+      <File FileName="clify/Views/Command/Create.cshtml" Line="6" Column="19" />
+      <File FileName="clify/wwwroot/css/site.css" Line="69" Column="9" />
+      <File FileName="clify/Views/Command/Index.cshtml" Line="23" Column="168" />
+      <File FileName="clify/Views/Home/Index.cshtml" Line="7" Column="5" />
+      <File FileName="clify/appsettings.json" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,19 +25,25 @@
               </Node>
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True">
-                <Node name="ApplicationDbContext.cs" selected="True" />
+                <Node name="Migrations" expanded="True" />
               </Node>
               <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Command" expanded="True" />
+                <Node name="Home" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="images" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.clify PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
 </Properties>
